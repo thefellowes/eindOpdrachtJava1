@@ -1,4 +1,4 @@
 package sample;
 
-public class ListView {
+public class ListView extends View {
 }
