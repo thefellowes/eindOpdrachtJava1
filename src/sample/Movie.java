@@ -7,20 +7,13 @@ public class Movie {
     private String name;
     private int productionYear;
     private String countryOfOrigin;
-    private int budget;
+    private double budget;
 
-    public List<Movie> movies = new ArrayList<>();
-
-    public Movie(String name, int productionYear, String countryOfOrigin, int budget) {
+    public Movie(String name, int productionYear, String countryOfOrigin, double budget) {
         this.name = name;
         this.productionYear = productionYear;
         this.countryOfOrigin = countryOfOrigin;
         this.budget = budget;
-        movies.add(new Movie(name, productionYear, countryOfOrigin, budget));
-    }
-
-    public List<Movie> getMovies(){
-        return movies;
     }
 
     public String getName() {
@@ -35,7 +28,7 @@ public class Movie {
         return countryOfOrigin;
     }
 
-    public int getBudget() {
+    public double getBudget() {
         return budget;
     }
 }

@@ -13,7 +13,14 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 
 public class Main extends Application {
+    private static Controller controller;
 
+    public static void main(String[] args){
+        Model model = new Model();
+        addMovie addMovieDisplay = new addMovie();
+
+        controller = new Controller(model, addMovieDisplay);
+    }
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent listViewRoot = FXMLLoader.load(getClass().getResource("listView.fxml"));
@@ -33,27 +40,5 @@ public class Main extends Application {
         sampleStage3.setTitle("graphView");
         sampleStage3.setScene(new Scene(sampleRoot3, 300, 275));
         sampleStage3.show();
-        //        primaryStage.setTitle("Hello World");
-//        primaryStage.setScene(new Scene(root, 300, 275));
-//        primaryStage.show();
-
-    //        System.out.println("Start method gets ran second");
-    //        FlowPane rootNode = new FlowPane();
-    //        Scene primaryScene = new Scene(rootNode, 350, 350);
-    //        Label demoLabel = new Label("kys world!");
-    //
-    //        // Now we add label as a child to the rootNode
-    //        rootNode.getChildren().add(demoLabel);
-    //
-    //        // Now we add the scene to the stage
-    //        primaryStage.setScene(primaryScene);
-    //
-    //        // And we make the stage visible
-    //        primaryStage.show();
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
