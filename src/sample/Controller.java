@@ -1,16 +1,11 @@
 package sample;
-import javafx.beans.Observable;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.util.Observer;
-import javax.swing.event.TableModelListener;
 
 public class Controller{
 //    private Model model;
 
-    private AddView addView;
-    private GraphView graphView;
-    private ListView listView;
+    private AddViewController addView;
+    private GraphViewController graphView;
+    private ListViewController listView;
 
 //    Controller(Model model, addMovie addMovieDisplay){
 //        this.model = model;

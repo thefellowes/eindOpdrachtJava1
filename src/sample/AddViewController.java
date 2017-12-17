@@ -3,9 +3,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextField;
-import java.awt.*;
 
-public class AddView extends View {
+public class AddViewController extends ViewController {
 
     @FXML private TextField name;
     @FXML private TextField year;

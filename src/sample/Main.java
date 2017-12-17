@@ -10,10 +10,6 @@ public class Main extends Application {
     private static Controller controller;
 
     public static void main(String[] args){
-//        Model model = new Model();
-//        addMovie addMovieDisplay = new addMovie();
-
-//        controller = new Controller(model, addMovieDisplay);
         launch(args);
     }
     @Override
