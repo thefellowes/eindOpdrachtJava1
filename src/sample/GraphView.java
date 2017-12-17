@@ -1,4 +1,4 @@
 package sample;
 
-public class graphView {
+public class GraphView {
 }
