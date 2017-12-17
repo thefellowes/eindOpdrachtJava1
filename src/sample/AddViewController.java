@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextField;
 
+import java.util.Observable;
+
 public class AddViewController extends ViewController {
 
     @FXML private TextField name;
@@ -22,5 +24,15 @@ public class AddViewController extends ViewController {
         actiontarget.setText("Add button pressed");
     }
 
+    public void addMovie(String name, int year, String countryOfOrigin, double budget) {
+
+    }
+
+
+    @Override
+    public void update(Observable o, Object arg) {
+        System.out.println("notified AddViewController");
+        return;
+    }
 
 }

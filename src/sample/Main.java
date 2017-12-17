@@ -14,6 +14,17 @@ public class Main extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception{
+        Model model = new Model();
+        AddViewController addViewController = new AddViewController();
+        GraphViewController graphViewController = new GraphViewController();
+        ListViewController listViewController = new ListViewController();
+
+        model.addObserver(addViewController);
+        model.addObserver(graphViewController);
+        model.addObserver(listViewController);
+
+        model.notif();
+
         Parent listViewRoot = FXMLLoader.load(getClass().getResource("listView.fxml"));
         Stage listViewStage = new Stage();
         listViewStage.setTitle("listView");
