@@ -1,22 +1,27 @@
-package sample;
-
-public class Controller{
+//package sample;
+//
+//import javafx.event.ActionEvent;
+//import javafx.fxml.FXML;
+//import javafx.scene.control.TextField;
+//import javafx.scene.text.Text;
+//
+//import java.util.Observable;
+//
+//public class Controller {
+//
 //    private Model model;
-
-    private AddViewController addView;
-    private GraphViewController graphView;
-    private ListViewController listView;
-
-//    Controller(Model model, addMovie addMovieDisplay){
-//        this.model = model;
-//            this.addMovieDisplay = addMovieDisplay;
+//
+//    public AddViewController addViewController;
+//    private GraphViewController graphViewController;
+//    private ListViewController listViewController;
+//
+//    public Controller() {
+//
 //    }
-
-//    public void update(Observable o, Object arg){
-//        addMovieDisplay.clear();
+//
+//    public void handleAddButtonAction(ActionEvent actionEvent) {
+//        addViewController.handleAddButtonAction(actionEvent);
 //    }
-
-//    public Model getData(){
-//        return model;
-//    }
-}
+//
+//
+//}

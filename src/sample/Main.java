@@ -7,23 +7,33 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    private static Controller controller;
 
     public static void main(String[] args){
         launch(args);
     }
     @Override
     public void start(Stage primaryStage) throws Exception{
+        // old way
+        // Controller controller = new Controller();
+
+        // newer way
         Model model = new Model();
         AddViewController addViewController = new AddViewController();
         GraphViewController graphViewController = new GraphViewController();
         ListViewController listViewController = new ListViewController();
 
+        // add observers to the model class
         model.addObserver(addViewController);
         model.addObserver(graphViewController);
         model.addObserver(listViewController);
 
-        model.notif();
+        // add model to controllers
+        addViewController.initModel(model);
+//        graphViewController.initModel(model);
+//        listViewController.initModel(model);
+
+        // test notifier
+        model.notifytest();
 
         Parent listViewRoot = FXMLLoader.load(getClass().getResource("listView.fxml"));
         Stage listViewStage = new Stage();
@@ -33,7 +43,7 @@ public class Main extends Application {
 
         Parent sampleRoot2 = FXMLLoader.load(getClass().getResource("addView.fxml"));
         Stage sampleStage2 = new Stage();
-        sampleStage2.setTitle("addView");
+        sampleStage2.setTitle("addViewController");
         sampleStage2.setScene(new Scene(sampleRoot2, 300, 275));
         sampleStage2.show();
 

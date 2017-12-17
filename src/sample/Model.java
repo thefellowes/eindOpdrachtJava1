@@ -13,16 +13,24 @@ public class Model extends Observable {
         new Movie("BraveHeart", 1995, "Scotland", 200.000)
     ));
 
-    public void add(Movie movie){
+    public void addMovie(String name, int productionYear, String countryOfOrigin, double budget){
+        Movie movie = new Movie(name, productionYear, countryOfOrigin, budget);
         movies.add(movie);
+
+        setChanged();
+        notifyObservers();
     }
 
     public List<Movie> getMovies(){
         return movies;
     }
 
-    public void notif() {
+    public Movie searchFilm() {
+        return new Movie("dd", 1222,"hell", 999);
+    }
+
+    public void notifytest() {
         setChanged();
-        notifyObservers();
+        notifyObservers(this);
     }
 }

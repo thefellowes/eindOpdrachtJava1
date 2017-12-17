@@ -23,4 +23,5 @@ public abstract class ViewController implements Observer {
     @Override
     public abstract void update(Observable o, Object arg);
 
+
 }
