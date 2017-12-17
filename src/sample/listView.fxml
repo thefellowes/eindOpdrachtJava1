@@ -15,7 +15,6 @@
         <VBox>
             <children>
                 <TableView fx:id="moviesTable" editable="true" items="${ListViewController.movieDataObservableList}">
-                    //Content here
                 </TableView>
                 <Button fx:id="getMoviesButton" onAction="#getMoviesButton" text="Fetch movies"></Button>
             </children>
