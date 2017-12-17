@@ -6,20 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import javafx.application.*;
-import javafx.scene.*;
-import javafx.stage.*;
-import javafx.scene.layout.*;
-import javafx.scene.control.*;
-
 public class Main extends Application {
     private static Controller controller;
 
     public static void main(String[] args){
-        Model model = new Model();
-        addMovie addMovieDisplay = new addMovie();
+//        Model model = new Model();
+//        addMovie addMovieDisplay = new addMovie();
 
-        controller = new Controller(model, addMovieDisplay);
+//        controller = new Controller(model, addMovieDisplay);
+        launch(args);
     }
     @Override
     public void start(Stage primaryStage) throws Exception{
