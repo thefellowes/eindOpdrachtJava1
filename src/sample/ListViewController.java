@@ -8,6 +8,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Observable;
@@ -26,27 +32,5 @@ public class ListViewController extends ViewController {
     public void update(Observable o, Object arg) {
         System.out.println("notified ListViewController");
         return;
-    }
-
-    private final ObservableList<Movie> movieDataObservableList
-            = FXCollections.observableArrayList();
-    public TableView movieTable;
-    public Button getMoviesButton;
-
-    public void getMoviesButton() {
-        //getMoviesFromController();
-    }
-
-    /*private void getMoviesFromController() {
-        ListViewController controller = new ListViewController();
-        try {
-            movieDataObservableList.setAll(controller.getMovies());
-        } catch (IOException e) {
-            System.out.println("Failed to connect to the controller");
-        }
-    }*/
-
-    public ObservableList<Movie> getMovieDataObservableList() {
-        return movieDataObservableList;
     }
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.control.Label?>
 
 <GridPane prefHeight="464.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListViewController">
-    <children>
+    <!--<children>
         <VBox>
             <children>
                 <TableView fx:id="moviesTable" editable="true" items="${ListViewController.movieDataObservableList}">
@@ -19,5 +19,5 @@
                 <Button fx:id="getMoviesButton" onAction="#getMoviesButton" text="Fetch movies"></Button>
             </children>
         </VBox>
-    </children>
+    </children>-->
 </GridPane>
