@@ -34,7 +34,6 @@ public class AddViewController extends ViewController {
         String country = this.country.getText();
         double budget = Double.parseDouble(this.budget.getText());
 
-        actiontarget.setText("Add button pressed");
         addMovie(name, year, country, budget);
 
         //Cleaning up after ourselves
@@ -45,12 +44,8 @@ public class AddViewController extends ViewController {
     }
 
     public void addMovie(String name, int year, String countryOfOrigin, double budget) {
-        System.out.println("1. name: " + name);
-        System.out.println("2. year: " + year);
-        System.out.println("3. country: " + countryOfOrigin);
-        System.out.println("4. budget: " + budget);
-        System.out.println("5. It lives!");
         model.addMovie(name, year, countryOfOrigin, budget);
+        actiontarget.setText("Added the movie");
     }
 
 

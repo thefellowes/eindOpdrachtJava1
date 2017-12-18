@@ -37,7 +37,7 @@ public class GraphViewController extends ViewController {
 
         List<Movie> movies = ((Model) model).getMovies();
 
-        // Create a simple struct
+        // Create a simple "struct"
         class countryStruct {
             public String name;
             public int amount;

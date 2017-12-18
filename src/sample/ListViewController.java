@@ -2,6 +2,9 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -13,18 +16,18 @@ import java.util.List;
 import java.util.Observable;
 import javafx.stage.Stage;
 
-import javax.swing.table.TableColumn;
-import javax.swing.text.TableView;
-
-
 public class ListViewController extends ViewController {
 
     private Model model;
     private VBox vBox;
-    //TableView<Movie> table;
 
-    /*@FXML
-    private TableColumn<Movie, String> nameColumn;
+//    TableView<Movie> table;
+
+    @FXML
+    private TableView movieTable;
+
+    @FXML
+    private TableColumn nameColumn;
 
     @FXML
     private TableColumn yearColumn;
@@ -33,7 +36,10 @@ public class ListViewController extends ViewController {
     private TableColumn originColumn;
 
     @FXML
-    private TableColumn budgetColumn;*/
+    private TableColumn budgetColumn;
+
+    @FXML
+    private Button rmMovieButton;
 
     @FXML
     protected void handleFetchMovies(ActionEvent event) {
@@ -54,8 +60,10 @@ public class ListViewController extends ViewController {
     @Override
     public void update(Observable o, Object model) {
         this.model = (Model) model;
+
+        ObservableList<Movie> data = movieTable.getItems();
+
         System.out.println("updated ListViewController");
-        return;
     }
 
     public List<Movie> getMovies() {
