@@ -57,7 +57,7 @@ public class AddViewController extends ViewController {
     @Override
     public void update(Observable o, Object model) {
         this.model = (Model) model;
-        System.out.println("notified AddViewController");
+        System.out.println("updated AddViewController");
         return;
     }
 }

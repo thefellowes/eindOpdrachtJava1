@@ -20,6 +20,8 @@ import java.util.Observable;
 
 public class ListViewController extends ViewController {
 
+    private Model model;
+
     @FXML protected void handleRemoveButtonAction(ActionEvent event) {
         return;
     }
@@ -29,8 +31,9 @@ public class ListViewController extends ViewController {
     }
 
     @Override
-    public void update(Observable o, Object arg) {
-        System.out.println("notified ListViewController");
+    public void update(Observable o, Object model) {
+        this.model = (Model) model;
+        System.out.println("updated ListViewController");
         return;
     }
 }

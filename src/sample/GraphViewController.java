@@ -31,7 +31,7 @@ public class GraphViewController extends ViewController {
     @Override
     public void update(Observable o, Object model) {
         this.model = (Model) model;
-        System.out.println("notified GraphViewController");
+        System.out.println("updated GraphViewController");
         return;
     }
 
