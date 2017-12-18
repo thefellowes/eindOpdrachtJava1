@@ -5,7 +5,7 @@ import java.util.*;
 public class Model extends Observable {
 
     //Inserting some test data
-    public List<Movie> movies = new ArrayList<Movie>(Arrays.asList(
+    private List<Movie> movies = new ArrayList<Movie>(Arrays.asList(
         new Movie("myFirstMovie", 2017, "Somewhere over the rainbow", 100.000),
         new Movie("mySecondMovie", 2016, "Somewhere over the rainbow", 20.000),
         new Movie("BraveHeart", 1995, "Scotland", 200.000)
@@ -38,7 +38,7 @@ public class Model extends Observable {
         }
     }
 
-    public void notifytest() {
+    public void notifyInit() {
         setChanged();
         notifyObservers(this);
     }

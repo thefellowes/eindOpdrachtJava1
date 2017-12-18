@@ -24,7 +24,7 @@ public class ListViewController extends ViewController {
 //    TableView<Movie> table;
 
     @FXML
-    private TableView movieTable;
+    private TableView<Movie> movieTable;
 
     @FXML
     private TableColumn nameColumn;
@@ -62,11 +62,11 @@ public class ListViewController extends ViewController {
         this.model = (Model) model;
 
         ObservableList<Movie> data = movieTable.getItems();
-
+        data.setAll(((Model) model).getMovies());
         System.out.println("updated ListViewController");
     }
 
-    public List<Movie> getMovies() {
+    private List<Movie> getMovies() {
         List<Movie> movies = model.getMovies();
         return movies;
     }

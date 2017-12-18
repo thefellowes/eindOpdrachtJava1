@@ -11,38 +11,28 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" xmlns:a="http://javafx.com/javafx/8" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListViewController">
 	<children>
-		<TableView fx:id="tblViewer" prefHeight="342.0" prefWidth="500.0">
+		<TableView fx:id="movieTable" prefHeight="342.0" prefWidth="500.0">
 			<columns>
 				<!--setCellValueFactory(new PropertyValueFactory<>("productionYear"))-->
 				<TableColumn fx:id="nameColumn" prefWidth="122.0" text="Name">
-					<cellValueFactory><PropertyValueFactory property="firstName" />
+					<cellValueFactory><PropertyValueFactory property="name" />
 					</cellValueFactory>
 				</TableColumn>
 				<TableColumn fx:id="yearColumn" minWidth="0.0" prefWidth="132.0" text="Year" >
-					<cellValueFactory><PropertyValueFactory property="firstName" />
+					<cellValueFactory><PropertyValueFactory property="productionYear" />
 					</cellValueFactory>
 				</TableColumn>
 				<TableColumn fx:id="originColumn" prefWidth="129.0" text="Origin" >
-					<cellValueFactory><PropertyValueFactory property="firstName" />
+					<cellValueFactory><PropertyValueFactory property="countryOfOrigin" />
 					</cellValueFactory>
 				</TableColumn>
 				<TableColumn fx:id="budgetColumn" minWidth="0.0" prefWidth="117.0" text="Budget" >
-					<cellValueFactory><PropertyValueFactory property="firstName" />
+					<cellValueFactory><PropertyValueFactory property="budget" />
 					</cellValueFactory>
 				</TableColumn>
 			</columns>
 			<items>
 				<FXCollections fx:factory="observableArrayList">
-					<Movie name="Jacob" lastName="Smith"
-						email="jacob.smith@example.com"/>
-					<Movie name="Isabella" lastName="Johnson"
-						email="isabella.johnson@example.com"/>
-					<Movie name="Ethan" lastName="Williams"
-						email="ethan.williams@example.com"/>
-					<Movie name="Emma" lastName="Jones"
-						email="emma.jones@example.com"/>
-					<Movie name="Michael" lastName="Brown"
-						email="michael.brown@example.com"/>
 				</FXCollections>
 			</items>
 		</TableView>

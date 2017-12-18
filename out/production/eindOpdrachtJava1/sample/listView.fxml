@@ -5,22 +5,41 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+<?import sample.Movie?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" xmlns:a="http://javafx.com/javafx/8" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListViewController">
-      <children>
-         <TableView fx:id="tblViewer" prefHeight="342.0" prefWidth="500.0">
-           <columns>
-               <!--setCellValueFactory(new PropertyValueFactory<>("productionYear"))-->
-               <TableColumn fx:id="nameColumn" prefWidth="122.0" text="Name" />
-               <TableColumn fx:id="yearColumn" minWidth="0.0" prefWidth="132.0" text="Year" />
-               <TableColumn fx:id="originColumn" prefWidth="129.0" text="Origin" />
-               <TableColumn fx:id="budgetColumn" minWidth="0.0" prefWidth="117.0" text="Budget" />
-           </columns>
-         </TableView>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button id="rmMovieButton" mnemonicParsing="false" text="Remove movie!" />
-        </buttons>
-      </ButtonBar>
-      </children>
+	<children>
+		<TableView fx:id="movieTable" prefHeight="342.0" prefWidth="500.0">
+			<columns>
+				<!--setCellValueFactory(new PropertyValueFactory<>("productionYear"))-->
+				<TableColumn fx:id="nameColumn" prefWidth="122.0" text="Name">
+					<cellValueFactory><PropertyValueFactory property="name" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="yearColumn" minWidth="0.0" prefWidth="132.0" text="Year" >
+					<cellValueFactory><PropertyValueFactory property="productionYear" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="originColumn" prefWidth="129.0" text="Origin" >
+					<cellValueFactory><PropertyValueFactory property="countryOfOrigin" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="budgetColumn" minWidth="0.0" prefWidth="117.0" text="Budget" >
+					<cellValueFactory><PropertyValueFactory property="budget" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+			<items>
+				<FXCollections fx:factory="observableArrayList">
+				</FXCollections>
+			</items>
+		</TableView>
+		<ButtonBar prefHeight="40.0" prefWidth="200.0">
+			<buttons>
+				<Button id="rmMovieButton" mnemonicParsing="false" text="Remove movie!" />
+			</buttons>
+		</ButtonBar>
+	</children>
 </VBox>
