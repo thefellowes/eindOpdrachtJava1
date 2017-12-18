@@ -13,9 +13,10 @@ public class Model extends Observable {
     public void addMovie(String name, int productionYear, String countryOfOrigin, double budget){
         Movie movie = new Movie(name, productionYear, countryOfOrigin, budget);
         movies.add(movie);
-        for (Movie m : movies){
-            System.out.println(m.getName() + " " + m.getProductionYear() + " " + m.getCountryOfOrigin() + " " + m.getBudget());
-        }
+
+        // for debug purposes
+        printMovies();
+
         setChanged();
         notifyObservers(this);
     }
@@ -26,6 +27,14 @@ public class Model extends Observable {
 
     public Movie searchFilm() {
         return new Movie("dd", 1222,"hell", 999);
+    }
+
+    private void printMovies() {
+        int i = 1;
+        for (Movie m : movies){
+            System.out.println(i + ". " + m.getName() + " " + m.getProductionYear() + " " + m.getCountryOfOrigin() + " " + m.getBudget());
+            i++;
+        }
     }
 
     public void notifytest() {
