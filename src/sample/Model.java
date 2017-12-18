@@ -1,13 +1,10 @@
 package sample;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Observable;
+import java.util.*;
 
 public class Model extends Observable {
     //Inserting some test data
-    private List<Movie> movies = new LinkedList<>(Arrays.asList(
+    private List<Movie> movies = new ArrayList<Movie>(Arrays.asList(
         new Movie("myFirstMovie", 2017, "Somewhere over the rainbow", 100.000),
         new Movie("mySecondMovie", 2016, "Somewhere over the rainbow", 20.000),
         new Movie("BraveHeart", 1995, "Scotland", 200.000)
