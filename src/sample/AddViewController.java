@@ -29,10 +29,10 @@ public class AddViewController extends ViewController {
         System.out.println("budget: " + budget.getText());
 
         // clean up the input
-        String name = this.name.getText().toString();
-        int year = Integer.parseInt(this.year.getText().toString());
+        String name = this.name.getText();
+        int year = Integer.parseInt(this.year.getText());
         String country = this.country.getText();
-        double budget = Double.parseDouble(this.budget.getText().toString());
+        double budget = Double.parseDouble(this.budget.getText());
 
         actiontarget.setText("Add button pressed");
         addMovie(name, year, country, budget);
@@ -50,12 +50,7 @@ public class AddViewController extends ViewController {
         System.out.println("3. country: " + countryOfOrigin);
         System.out.println("4. budget: " + budget);
         System.out.println("5. It lives!");
-
-        // debug lines
-        //        Movie movie = (Movie) model.getMovies().toArray()[1];
-        //        System.out.println("5. model:" + movie.getName());
         model.addMovie(name, year, countryOfOrigin, budget);
-
     }
 
 
@@ -65,12 +60,4 @@ public class AddViewController extends ViewController {
         System.out.println("notified AddViewController");
         return;
     }
-
-    public void initModel(Model model) {
-        if (this.model != null) {
-            System.out.println("1. name: " + name);
-        }
-        this.model = model;
-    }
-
 }

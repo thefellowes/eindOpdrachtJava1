@@ -3,6 +3,7 @@ package sample;
 import java.util.*;
 
 public class Model extends Observable {
+
     //Inserting some test data
     public List<Movie> movies = new ArrayList<Movie>(Arrays.asList(
         new Movie("myFirstMovie", 2017, "Somewhere over the rainbow", 100.000),

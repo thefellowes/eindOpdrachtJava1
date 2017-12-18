@@ -1,23 +1,36 @@
 package sample;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
-import javafx.scene.control.TextField;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import java.util.Arrays;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
 
 import java.util.Observable;
 
 public class GraphViewController extends ViewController {
 
-    @FXML protected void handleAddButtonAction(ActionEvent event) {
-        return;
+    private Model model;
+
+    @FXML
+    private BarChart barChart;
+
+    public GraphViewController() {
+        final CategoryAxis xAxis = new CategoryAxis();
+        final NumberAxis yAxis = new NumberAxis();
     }
 
     public void displayGraphs() {
         return;
     }
 
+
     @Override
-    public void update(Observable o, Object arg) {
+    public void update(Observable o, Object model) {
+        this.model = (Model) model;
         System.out.println("notified GraphViewController");
         return;
     }

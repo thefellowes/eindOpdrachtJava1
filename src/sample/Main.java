@@ -8,6 +8,9 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private int width = 500;
+    private int height = 375;
+
     public static void main(String[] args){
         launch(args);
     }
@@ -21,7 +24,7 @@ public class Main extends Application {
         ListViewController listViewController = (ListViewController) fxmlLoader.getController();
         Stage listViewStage = new Stage();
         listViewStage.setTitle("listView");
-        listViewStage.setScene(new Scene(listViewRoot, 300, 275));
+        listViewStage.setScene(new Scene(listViewRoot, width, height));
         listViewStage.show();
 
         FXMLLoader fxmlLoader2 = new FXMLLoader();
@@ -29,7 +32,7 @@ public class Main extends Application {
         AddViewController addViewController = (AddViewController) fxmlLoader2.getController();
         Stage sampleStage2 = new Stage();
         sampleStage2.setTitle("addViewController");
-        sampleStage2.setScene(new Scene(addViewRoot, 300, 275));
+        sampleStage2.setScene(new Scene(addViewRoot, width, height));
         sampleStage2.show();
 
         FXMLLoader fxmlLoader3 = new FXMLLoader();
@@ -37,7 +40,7 @@ public class Main extends Application {
         GraphViewController graphViewController = (GraphViewController) fxmlLoader3.getController();
         Stage sampleStage3 = new Stage();
         sampleStage3.setTitle("graphView");
-        sampleStage3.setScene(new Scene(graphViewRoot, 300, 275));
+        sampleStage3.setScene(new Scene(graphViewRoot, width, height));
         sampleStage3.show();
 
         // add observers to the model class
