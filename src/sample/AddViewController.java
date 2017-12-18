@@ -36,6 +36,12 @@ public class AddViewController extends ViewController {
 
         actiontarget.setText("Add button pressed");
         addMovie(name, year, country, budget);
+
+        //Cleaning up after ourselves
+        this.name.clear();
+        this.year.clear();
+        this.country.clear();
+        this.budget.clear();
     }
 
     public void addMovie(String name, int year, String countryOfOrigin, double budget) {
@@ -49,6 +55,7 @@ public class AddViewController extends ViewController {
         //        Movie movie = (Movie) model.getMovies().toArray()[1];
         //        System.out.println("5. model:" + movie.getName());
         model.addMovie(name, year, countryOfOrigin, budget);
+
     }
 
 
