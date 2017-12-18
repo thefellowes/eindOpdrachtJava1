@@ -14,8 +14,11 @@ public class Model extends Observable {
         Movie movie = new Movie(name, productionYear, countryOfOrigin, budget);
         movies.add(movie);
 
+        // for debug purposes
+        printMovies();
+
         setChanged();
-        notifyObservers();
+        notifyObservers(this);
     }
 
     public List<Movie> getMovies(){
@@ -24,6 +27,14 @@ public class Model extends Observable {
 
     public Movie searchFilm() {
         return new Movie("dd", 1222,"hell", 999);
+    }
+
+    private void printMovies() {
+        int i = 1;
+        for (Movie m : movies){
+            System.out.println(i + ". " + m.getName() + " " + m.getProductionYear() + " " + m.getCountryOfOrigin() + " " + m.getBudget());
+            i++;
+        }
     }
 
     public void notifytest() {
