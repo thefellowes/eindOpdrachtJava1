@@ -13,9 +13,11 @@ public class Model extends Observable {
     public void addMovie(String name, int productionYear, String countryOfOrigin, double budget){
         Movie movie = new Movie(name, productionYear, countryOfOrigin, budget);
         movies.add(movie);
-
+        for (Movie m : movies){
+            System.out.println(m.getName() + " " + m.getProductionYear() + " " + m.getCountryOfOrigin() + " " + m.getBudget());
+        }
         setChanged();
-        notifyObservers();
+        notifyObservers(this);
     }
 
     public List<Movie> getMovies(){
