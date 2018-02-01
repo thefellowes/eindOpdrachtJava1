@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 
 import java.util.Observable;
 
+// Observer Patter
 public class AddViewController extends ViewController {
 
     private Model model;

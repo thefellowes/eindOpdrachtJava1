@@ -2,6 +2,7 @@ package sample;
 import java.util.Observable;
 import java.util.Observer;
 
+// Observer Pattern
 public abstract class ViewController implements Observer {
 
     public String getName() {

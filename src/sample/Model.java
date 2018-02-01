@@ -2,6 +2,7 @@ package sample;
 
 import java.util.*;
 
+// Observer Patter
 public class Model extends Observable {
 
     //Inserting some test data

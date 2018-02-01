@@ -14,6 +14,7 @@ import javafx.scene.chart.XYChart;
 import java.util.List;
 import java.util.Observable;
 
+// Observer Pattern
 public class GraphViewController extends ViewController {
 
     private Model model;

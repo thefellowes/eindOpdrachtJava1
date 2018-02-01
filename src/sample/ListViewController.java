@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Observable;
 import javafx.stage.Stage;
 
+// Observer Pattern
 public class ListViewController extends ViewController {
 
     private Model model;
