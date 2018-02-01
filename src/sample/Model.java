@@ -32,11 +32,11 @@ public class Model extends Observable {
     }
 
     private void printMovies() {
-        int i = 1;
-        for (Movie m : movies){
-            System.out.println(i + ". " + m.getName() + " " + m.getProductionYear() + " " + m.getCountryOfOrigin() + " " + m.getBudget());
-            i++;
-        }
+
+        // stream + lambda
+        movies
+                .stream()
+                .forEach(M -> System.out.println(M.getName() + " " + M.getProductionYear() + " " + M.getCountryOfOrigin() + " " + M.getBudget()));
     }
 
     public void notifyInit() {
