@@ -8,6 +8,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.beans.property.SimpleStringProperty;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main extends Application {
     //Stage window;
@@ -22,7 +26,14 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        Model model = new Model();
+        //Inserting some test data
+        List<Movie> movies = new ArrayList<Movie>(Arrays.asList(
+            new Movie("myFirstMovie", 2017, "Somewhere over the rainbow", 100.000),
+            new Movie("mySecondMovie", 2016, "Somewhere over the rainbow", 20.000),
+            new Movie("BraveHeart", 1995, "Scotland", 200.000)
+        ));
+
+        Model model = new Model(movies);
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent listViewRoot = fxmlLoader.load(getClass().getResource("listView.fxml").openStream());
