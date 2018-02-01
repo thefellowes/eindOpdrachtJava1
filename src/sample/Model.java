@@ -2,7 +2,7 @@ package sample;
 
 import java.util.*;
 
-// Observer Patter
+// Observer Pattern
 public class Model extends Observable {
 
     private List<Movie> movies;
@@ -19,6 +19,7 @@ public class Model extends Observable {
         // for debug purposes
         printMovies();
 
+        // Observer Pattern
         setChanged();
         notifyObservers(this);
     }

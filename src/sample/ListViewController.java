@@ -17,6 +17,7 @@ import java.util.Observable;
 import javafx.stage.Stage;
 
 // Observer Pattern
+// Adapter pattern
 public class ListViewController extends ViewController {
 
     private Model model;
@@ -58,6 +59,7 @@ public class ListViewController extends ViewController {
         return;
     }
 
+    // Observer Pattern
     @Override
     public void update(Observable o, Object model) {
         this.model = (Model) model;
@@ -67,6 +69,7 @@ public class ListViewController extends ViewController {
         System.out.println("updated ListViewController");
     }
 
+    // Adapter pattern
     private List<Movie> getMovies() {
         List<Movie> movies = model.getMovies();
         return movies;

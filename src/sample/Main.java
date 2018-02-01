@@ -35,6 +35,8 @@ public class Main extends Application {
 
         Model model = new Model(movies);
 
+        ProxyModel proxy = new ProxyModel();
+
         FXMLLoader fxmlLoader = new FXMLLoader();
         Parent listViewRoot = fxmlLoader.load(getClass().getResource("listView.fxml").openStream());
         ListViewController listViewController = (ListViewController) fxmlLoader.getController();
@@ -54,6 +56,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader3 = new FXMLLoader();
         Parent graphViewRoot = fxmlLoader3.load(getClass().getResource("graphView.fxml").openStream());
         GraphViewController graphViewController = (GraphViewController) fxmlLoader3.getController();
+        graphViewController.setProxy(proxy);
         Stage sampleStage3 = new Stage();
         sampleStage3.setTitle("graphView");
         sampleStage3.setScene(new Scene(graphViewRoot, width, height));
@@ -63,6 +66,7 @@ public class Main extends Application {
         model.addObserver(addViewController);
         model.addObserver(graphViewController);
         model.addObserver(listViewController);
+        model.addObserver(proxy);
 
         // test notifier
         model.notifyInit();

@@ -21,6 +21,7 @@ public abstract class ViewController implements Observer {
         return 1;
     }
 
+    // Observer Pattern
     @Override
     public abstract void update(Observable o, Object arg);
 

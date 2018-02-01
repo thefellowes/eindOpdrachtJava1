@@ -15,28 +15,25 @@ import java.util.List;
 import java.util.Observable;
 
 // Observer Pattern
+// Proxy Pattern
 public class GraphViewController extends ViewController {
 
-    private Model model;
+    // Proxy Pattern
+    private ProxyModel proxy;
 
     @FXML
     private BarChart barChart;
-
-    public GraphViewController() {
-
-    }
 
     public void displayGraphs() {
         return;
     }
 
-
+    // Observer Pattern
     @Override
     public void update(Observable o, Object model) {
-        this.model = (Model) model;
-        System.out.println("updated GraphViewController");
 
-        List<Movie> movies = ((Model) model).getMovies();
+        // Proxy Pattern
+        List<Movie> movies = ((ProxyModel) proxy).getMovies();
 
         // Create a simple "struct"
         class countryStruct {
@@ -78,6 +75,10 @@ public class GraphViewController extends ViewController {
         barChartData.add(series);
         barChart.setData(barChartData);
 
+        System.out.println("updated GraphViewController");
     }
 
+    public void setProxy(ProxyModel proxy) {
+        this.proxy = proxy;
+    }
 }
