@@ -51,13 +51,13 @@ public class ListViewController extends ViewController {
         }
    }
 
-    @FXML protected void handleRemoveButtonAction(ActionEvent event) {
-        return;
+    @FXML
+    protected void handleRemoveButtonAction(ActionEvent event) {
+        Movie toDelete = movieTable.getSelectionModel().getSelectedItem();
+        model.removeMovie(toDelete);
+//        System.out.println("[Debug] rm");
     }
 
-    public void removeMovie() {
-        return;
-    }
 
     // Observer Pattern
     @Override

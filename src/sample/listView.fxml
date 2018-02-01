@@ -38,7 +38,7 @@
 		</TableView>
 		<ButtonBar prefHeight="40.0" prefWidth="200.0">
 			<buttons>
-				<Button id="rmMovieButton" mnemonicParsing="false" text="Remove movie!" />
+				<Button id="rmMovieButton" mnemonicParsing="false" text="Remove movie!" onAction="#handleRemoveButtonAction" />
 			</buttons>
 		</ButtonBar>
 	</children>

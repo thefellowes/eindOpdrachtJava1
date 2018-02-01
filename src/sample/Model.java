@@ -1,6 +1,7 @@
 package sample;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 // Observer Pattern
 public class Model extends Observable {
@@ -24,6 +25,19 @@ public class Model extends Observable {
         notifyObservers(this);
     }
 
+    public void removeMovie(Movie toDelete) {
+        System.out.println("[Debug] rm: " + toDelete.getName());
+        List<Movie> localMovies = getMovies();
+
+        // stream + lambda
+        movies = localMovies
+                .stream()
+                .filter(M -> !(M.getName().equals(toDelete.getName()) && M.getCountryOfOrigin().equals(toDelete.getCountryOfOrigin())) )
+                .collect(Collectors.toList());
+
+        setChanged();
+        notifyObservers(this);
+    }
     public List<Movie> getMovies(){
         return movies;
     }
